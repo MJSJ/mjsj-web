@@ -1,5 +1,7 @@
 <template>
     <div class="top_bar">
+        <icon name="bars"></icon>
+        <i class="fa fa-bars" aria-hidden="true"></i>
         <el-row class="top_bar_wrapper">
             <el-col :span="12"><div class="top_icon">design</div></el-col>
             <el-col :span="12">
@@ -19,8 +21,6 @@
 </template>
 
 <script>
-
-
 export default {
     data() {
       return {
@@ -28,7 +28,7 @@ export default {
         activeIndex2: '1'
       };
     },
-     methods: {
+    methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
       }

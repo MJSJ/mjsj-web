@@ -44,7 +44,7 @@ function _post(url,baseargs){
         fetch(url,{
             credentials:'include',
             method:'POST',
-            body:_mergePostData(baseargs),
+            body:baseargs,
             headers: {
                 'Content-Type': 'json'
             }

@@ -119,7 +119,10 @@ module.exports = {
     devtool: 'inline-source-map',
     resolve: {
         modules: [path.resolve(__dirname, 'node_modules')],
-        extensions: ['.js', '.es6', '.json', '.jsx', '.vue']
+        extensions: ['.js', '.es6', '.json', '.jsx', '.vue'],
+        alias: {
+            vue: 'vue/dist/vue.js'
+        }
     },
     module: {
         rules: [

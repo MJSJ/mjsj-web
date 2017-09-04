@@ -19,7 +19,9 @@
     "html-webpack-plugin": "^2.30.1",
     "qs": "^6.5.0",
     "vue": "2.2.1",
+    "vue-awesome": "^2.3.3",
     "vue-carousel": "^0.6.5",
+    "vue-strap": "^1.1.37",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
