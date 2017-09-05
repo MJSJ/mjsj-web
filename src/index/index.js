@@ -8,12 +8,12 @@ Vue.use(ElementUI)
 import 'vue-awesome/icons/bars'
 import Icon from 'vue-awesome/components/Icon'
 Vue.component('icon', Icon)
+
+import { Cell } from 'mint-ui';
+Vue.component(Cell.name, Cell);
+import 'mint-ui/lib/style.css';
+
 new Vue({
 	el: '#app',
 	render: h => h(App)
 })
-
-
-var escapeHtml = require('escape-html');
-var html = escapeHtml('<div>daa</div>');
-console.log(html)

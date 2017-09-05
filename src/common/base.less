@@ -1,0 +1,30 @@
+
+
+*{
+    margin:0;
+    padding: 0
+}
+@media screen and (min-width:980px){
+    .sm_screen{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:980px){
+    .bg_screen{
+        display: none !important;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+.v_center(){
+    vertical-align: middle;
+    &.after{
+        content:"";
+        display: inline-block;
+        width:0;
+        height: 100%;
+        vertical-align: middle;
+    }
+}

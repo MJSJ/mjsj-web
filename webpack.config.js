@@ -83,7 +83,7 @@ if (env == "dev") {
     vueloadRule = {
         test: /\.vue$/,
         loader: 'vue-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules(?![\\/]_vue-awesome@2\.3\.3@vue-awesome[\\/])/,
         options: {
             loaders: {
                 'css': "vue-style-loader!css-loader!postcss-loader",
@@ -95,7 +95,7 @@ if (env == "dev") {
     vueloadRule = {
         test: /\.vue$/,
         loader: 'vue-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules(?![\\/]_vue-awesome@2\.3\.3@vue-awesome[\\/])/,
         options: {
             loaders: {
                 'css': ExtractTextPlugin.extract(cssOption),
@@ -135,7 +135,7 @@ module.exports = {
                         cacheDirectory: env == "dev"
                     }
                 }],
-                exclude: /node_modules/
+                exclude: /node_modules(?![\\/]_vue-awesome@2\.3\.3@vue-awesome[\\/])/,
             }, {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract(cssOption)
