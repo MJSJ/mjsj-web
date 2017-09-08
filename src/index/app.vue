@@ -19,6 +19,9 @@ export default {
             carouselList:{}
         }
     },
+    props:{
+        navStore:{}
+    },
     components: {
         topBar,
         teleText,
@@ -31,6 +34,7 @@ export default {
         api.fetchCarouselList().then((res)=>{
             this.carouselList = res
         })
+      
     }
 }
 </script>

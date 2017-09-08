@@ -17,7 +17,8 @@ const JSONP_URLS = {
 //本地Mock数据
 const LOCAL_URLS = {
     fetchTeleTextList: db.teleTextList,
-    fetchCarouselList: db.carouselList
+    fetchCarouselList: db.carouselList,
+    fetchNavStore:db.navStore
 }
 
 const api = {

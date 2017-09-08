@@ -47,3 +47,18 @@ export const carouselList = [
         pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAg3_j7ywUogo7M-AMwjQU4jwM.jpg",
     }
 ]
+
+export const navStore = {
+    title:"网站名称",
+    navList:[{
+        title:"首页",
+        href:"//baidu.com"
+    },{
+        title:"关于我们",
+        href:"//baidu.com"
+    },
+    {
+        title:"案例展示",
+        href:"//baidu.com"
+    }]
+}

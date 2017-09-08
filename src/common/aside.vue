@@ -42,8 +42,7 @@ export default {
         z-index: 100;
         left:0;
         top:0;
-        background:rgba(0,0,0,.5);
-        transition:all .2s ease-in-out;
+        transition:transform .2s ease-in-out;
         &.show_left{
             transform:translateX(-100%);
         }
@@ -52,6 +51,7 @@ export default {
         }
         &.show{
             transform:translateX(0);
+            background:rgba(0,0,0,.5);
         }
         .aside_wrapper{
             width:60%;

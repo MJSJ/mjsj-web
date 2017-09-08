@@ -1,42 +1,42 @@
 <template>
-    <div class="top_bar">
+    <div class="top_bar" v-if="navStore&&navStore.navList&&navStore.title">
         <div class="m_top_bar sm_screen">
             <div class="icon" @click="toggleAside"><icon name="bars"></icon></div>
-            <h1>design</h1>
+            <h1>{{navStore.title}}</h1>
         </div>
         
         <el-row class="top_bar_wrapper bg_screen">
-            <el-col :span="12"><div class="top_icon">design</div></el-col>
+            <el-col :span="12"><div class="top_icon">{{navStore.title}}</div></el-col>
             <el-col :span="12">
                 <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-                <el-menu-item index="1">处理中心</el-menu-item>
-                <el-submenu index="2">
-                    <template slot="title">我的工作台</template>
-                    <el-menu-item index="2-1">选项1</el-menu-item>
-                    <el-menu-item index="2-2">选项2</el-menu-item>
-                    <el-menu-item index="2-3">选项3</el-menu-item>
-                </el-submenu>
-                <el-menu-item index="3"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+                    <el-menu-item v-for="(nav,index) in navStore.navList" :index="index+''" :key="'nav_'+index"><a :href="nav.href" target="_blank">{{nav.title}}</a></el-menu-item>
                 </el-menu>
             </el-col>
         </el-row>
         <s-aside :show.sync="showLeft" placement="left" header="Title" :toggleAside="toggleAside">
-            <mt-cell title="标题文字"></mt-cell>
-            <mt-cell title="标题文字"></mt-cell>
+            <mt-cell  is-link v-for="(nav,index) in navStore.navList" :to="nav.href" :key="'nav_'+index">
+                 <icon slot="icon" name="th-large" class="v_center"></icon>
+                 <span slot="title" class="v_center">{{nav.title}}</span>
+            </mt-cell>
         </s-aside>
     </div>
 </template>
 
 <script>
+import api from "../common/api.js"
 import aside  from './aside.vue'
 export default {
     data() {
       return {
         activeIndex: '1',
         activeIndex2: '1',
-        showLeft:false
+        showLeft:false,
+        navStore:{}
       };
     },
+    // props:{
+    //     navStore:{},
+    // },
     components:{
         "s-aside":aside
     },
@@ -47,6 +47,11 @@ export default {
       toggleAside(){
           this.showLeft = !this.showLeft
       }
+    },
+    mounted(){
+        api.fetchNavStore().then((res)=>{
+            this.navStore = res
+        })
     }
 }
 </script>
@@ -88,6 +93,8 @@ export default {
         h1{
             flex:1;
             text-align: center;
+            font-size: 1.4rem;
+            line-height: 3.2rem;
         }
     }
     .aside_wrapper{
