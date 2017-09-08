@@ -1,5 +1,5 @@
 <template>
-    <div class="aside_container" @click="hideAside" :class="{
+    <div class="aside_container" @click="toggleAside" :class="{
             'show':show,
             'show_left':placement=='left',
             'show_right':placement=='right',
@@ -15,18 +15,19 @@ export default {
     props: {
         show:false,
         title:"",
-        placement:""
+        placement:"",
+        toggleAside:{}
     },
     methods: {
       hideAside(){
           this.show = false;
       }
     },
-    computed:{
-        isShow(){
-            return this.show
-        }
-    },
+    // computed:{
+    //     isShow(){
+    //         return this.show
+    //     }
+    // },
     mounted(){
 
     }
@@ -42,7 +43,7 @@ export default {
         left:0;
         top:0;
         background:rgba(0,0,0,.5);
-        transition:all .2s ease-in;
+        transition:all .2s ease-in-out;
         &.show_left{
             transform:translateX(-100%);
         }

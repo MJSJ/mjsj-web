@@ -20,11 +20,9 @@
                 </el-menu>
             </el-col>
         </el-row>
-        <s-aside :show.sync="showLeft" placement="left" header="Title">
-            <div class="aside_wrapper">
-                <mt-cell title="标题文字"></mt-cell>
-                <mt-cell title="标题文字"></mt-cell>
-            </div>
+        <s-aside :show.sync="showLeft" placement="left" header="Title" :toggleAside="toggleAside">
+            <mt-cell title="标题文字"></mt-cell>
+            <mt-cell title="标题文字"></mt-cell>
         </s-aside>
     </div>
 </template>
@@ -47,7 +45,6 @@ export default {
         console.log(key, keyPath);
       },
       toggleAside(){
-          debugger
           this.showLeft = !this.showLeft
       }
     }

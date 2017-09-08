@@ -31,7 +31,8 @@ export default {
     }
     @media screen  and (max-width:980px){
         .VueCarousel-pagination{
-            display: none;
+            position: absolute;
+            bottom:0;
         }
     }
 </style>
