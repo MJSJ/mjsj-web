@@ -3,7 +3,8 @@
         <carousel paginationActiveColor="#42b983" :navigationEnabled="true" navigationNextLabel="" navigationPrevLabel=""
          paginationColor="#b2ebd1" :paginationSize="5" :perPage="1" easing="linear" :speed="300" >
             <slide v-for="(item,index) in carouselList" :key="index">
-                <img width="100%" :src="item.pic" alt="">
+                <div class="slide_img_bg" :style="'background-image:url('+item.pic+')'"></div>
+                <!-- <img height="100%" :src="item.pic" alt=""> -->
             </slide>   
         </carousel>
 
@@ -49,6 +50,10 @@ export default {
         .navigation-ctl-box{
             display: none;
         }
+        .carousel_container{
+            height: 15rem;
+        }
+     
     }
 
     .VueCarousel-navigation{
@@ -58,14 +63,21 @@ export default {
         position: absolute;
         bottom:0;
     }
+    .VueCarousel,.VueCarousel-wrapper,.VueCarousel-inner{
+        height: 100%;
+    }
+    .slide_img_bg{
+        background-position: center;
+        background-size:cover;
+        width:100%;
+        height: 100%;;
+    }
 
     @media screen  and (min-width:980px){
         .carousel_container{
             height: 600px;
         }
      
-
-
         .navigation-ctl-box{
             position: absolute;
             top:50%;
