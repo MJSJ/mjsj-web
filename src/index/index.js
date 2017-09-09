@@ -20,3 +20,14 @@ new Vue({
 	el: '#app',
 	render: h => h(App)
 })
+
+Vue.directive('touch', {  
+    inserted:function(el){  
+        el.addEventListener("touchstart",function(e){  
+            el.style.cssText += "-webkit-transform:scale(1.1);-webkit-transition:all ease-in-out .2s";
+        },false)
+        el.addEventListener("touchend",function(e){  
+            el.style.cssText += "-webkit-transform:scale(1)";
+        },false)
+    }  
+}) 

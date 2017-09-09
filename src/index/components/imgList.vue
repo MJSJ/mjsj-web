@@ -5,9 +5,9 @@
             <h3 class="img_list_subtitle">{{imgStore.subTitle}}</h3>
 
             <el-row class="img_list" :gutter="20">
-                <el-col v-for="(img,index) in imgStore.imgList" :xs="12" :sm="12" :md="size" :key="'img_'+index">
+                <el-col v-for="(img,index) in imgStore.imgList" :xs="smSize" :sm="smSize" :md="size" :key="'img_'+index">
                     <div class="img_list_pic_box" @click="jump(img)">
-                        <img width="100%" :src="img.pic" alt="">
+                        <img v-touch width="100%" :src="img.pic" alt="">
                     </div>
                 </el-col>
             </el-row>
@@ -24,6 +24,17 @@ export default {
         size(){
             if(this.imgStore&&this.imgStore.imgList&&this.imgStore.imgList.length){
                 return 24/this.imgStore.imgList.length
+            }else{
+                return 0
+            }
+        },
+        smSize(){
+            if(this.imgStore&&this.imgStore.imgList&&this.imgStore.imgList.length){
+                if(this.imgStore.imgList.length%2){
+                    return 24
+                }else{
+                    return 12
+                }
             }else{
                 return 0
             }
