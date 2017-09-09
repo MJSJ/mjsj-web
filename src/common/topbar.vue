@@ -75,8 +75,8 @@ export default {
     }
     .m_top_bar{
         display: flex;
-        height: 6rem;
-        line-height: 6rem;
+        height: 5rem;
+        line-height: 5rem;
         padding:0 1rem;
         box-sizing: border-box;
         .icon{
@@ -86,7 +86,7 @@ export default {
             .fa-icon{
                 width: auto;
                 height: 2rem;
-                line-height: 6rem;
+                line-height: 5rem;
                 .v_center();
             }
         }
@@ -94,7 +94,7 @@ export default {
             flex:1;
             text-align: center;
             font-size: 1.4rem;
-            line-height: 6.2rem;
+            line-height: 5.2rem;
         }
     }
     .aside_wrapper{

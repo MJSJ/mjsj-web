@@ -18,7 +18,8 @@ const JSONP_URLS = {
 const LOCAL_URLS = {
     fetchTeleTextList: db.teleTextList,
     fetchCarouselList: db.carouselList,
-    fetchNavStore:db.navStore
+    fetchNavStore:db.navStore,
+    fetchImglList:db.imgStore
 }
 
 const api = {

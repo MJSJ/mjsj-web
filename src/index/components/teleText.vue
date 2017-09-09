@@ -38,6 +38,13 @@ export default {
         margin-top:3rem;
         .tele_text{
             margin-bottom:2rem;
+            
+            h1{
+                font-size:2rem;
+                line-height: 2rem;
+            }
         }
+
+        
     }
 </style>

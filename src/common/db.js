@@ -59,3 +59,23 @@ export const navStore = {
         href:"//baidu.com"
     }]
 }
+
+export const imgStore={
+    title:"服务领域",
+    subTitle:"以创新理念提升品牌影响力",
+    bg:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAgver7ywUop6injAcwgA842AQ.jpg",
+    imgList:[{
+        pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAg2ur7ywUol764uQQwmQI41AI.jpg",
+        url:"http://baidu.com"
+    },{
+        pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAg2ur7ywUol764uQQwmQI41AI.jpg",
+        url:"http://baidu.com"
+    },{
+        pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAg2ur7ywUol764uQQwmQI41AI.jpg",
+        url:"http://baidu.com"
+    },
+    // {
+    //     pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAg2ur7ywUol764uQQwmQI41AI.jpg"
+    // }
+    ]
+}

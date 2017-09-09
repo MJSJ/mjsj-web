@@ -3,6 +3,7 @@
     <top-bar></top-bar> 
     <carousel :carouselList="carouselList"></carousel>
     <tele-text :teleTextList="teleTextList" v-if="teleTextList"></tele-text>
+    <img-list :imgStore="imgStore"></img-list>
 </div>
 </template>
 
@@ -10,13 +11,15 @@
 import topBar from "../common/topbar.vue"
 import teleText from "./components/teleText.vue"
 import carousel from "./components/carousel.vue"
+import imgList from "./components/imgList.vue"
 import api from "../common/api.js"
 export default {
     name: 'app',
     data(){
         return {
             teleTextList:{},
-            carouselList:{}
+            carouselList:{},
+            imgStore:{}
         }
     },
     props:{
@@ -25,7 +28,8 @@ export default {
     components: {
         topBar,
         teleText,
-        carousel
+        carousel,
+        imgList
     },
     mounted(){
         api.fetchTeleTextList().then((res)=>{
@@ -33,6 +37,10 @@ export default {
         })
         api.fetchCarouselList().then((res)=>{
             this.carouselList = res
+        })
+
+        api.fetchImglList().then((res)=>{
+            this.imgStore = res
         })
       
     }
