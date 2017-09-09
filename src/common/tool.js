@@ -133,3 +133,9 @@ export function all(getUrls,postUrls,fetchJsonpUrls){
     }
     return _obj;
 }
+
+export function dispatchEvent(target){
+    let evt = document.createEvent("HTMLEvents");;
+    evt.initEvent("click","true","true");
+    target.dispatchEvent(evt);
+}

@@ -1,8 +1,8 @@
 <template>
 <div class="app">
     <top-bar></top-bar> 
-    <tele-text :teleTextList="teleTextList" v-if="teleTextList"></tele-text>
     <carousel :carouselList="carouselList"></carousel>
+    <tele-text :teleTextList="teleTextList" v-if="teleTextList"></tele-text>
 </div>
 </template>
 
