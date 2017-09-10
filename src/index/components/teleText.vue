@@ -44,13 +44,26 @@ export default {
                     height: 20rem;
                 }
             }
-            h1{
-                margin-top:1rem;
-                font-size:2rem;
-                line-height: 3rem;
+            @media screen and (max-width:980px){
+                h1{
+                    margin-top:1rem;
+                    font-size:2rem;
+                    line-height: 3rem;
+                }
+                p{
+                    line-height: 2rem;
+                }
             }
-            p{
-                line-height: 2rem;
+
+            @media screen and (min-width:980px){
+                h1{
+                    margin-top:10px;
+                    font-size:30px;
+                    line-height: 50px;
+                }
+                p{
+                    line-height: 30px;
+                }
             }
         }
 
