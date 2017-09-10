@@ -55,6 +55,8 @@ export default {
         background-repeat: no-repeat;
         background-position: center;
         padding-top:2rem;
+        margin-bottom:2rem;
+        padding-bottom:2rem;
         .img_list_wrapper{
             max-width: 980px;
             margin:0 auto;
@@ -75,11 +77,19 @@ export default {
                 }
                 .img_list_pic_box{
                     width: 100%;
+                    height: 330px;
                     overflow: hidden;
+
+                    @media screen and(max-width: 980px){
+                        height: 20rem;
+                    }
                 }
+                
                 img{
+                    transition:all .3s linear;
                     &:hover{
                         transform:scale(1.1);
+                        
                     }
                 }
             }

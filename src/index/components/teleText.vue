@@ -2,7 +2,7 @@
     <div class="tele_text_container">
         <el-row class="tele_text" v-for="teleText in teleTextList">
             <el-col :md="16">
-                <img width="100%" v-touch :src="teleText.pic" alt="">
+                <img height="100%" v-touch :src="teleText.pic" alt="">
             </el-col>
             <el-col :md="8" class="figure_text" v-html="teleText.texts"></el-col>
         </el-row>
@@ -38,8 +38,14 @@ export default {
         margin-top:3rem;
         .tele_text{
             margin-bottom:2rem;
-            
+            &>.el-col:first-child{
+                overflow: hidden;
+                @media screen and (max-width:980px){
+                    height: 20rem;
+                }
+            }
             h1{
+                margin-top:1rem;
                 font-size:2rem;
                 line-height: 3rem;
             }

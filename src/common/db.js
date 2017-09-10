@@ -36,12 +36,34 @@ export const teleTextList = [
 ]
 
 //看看后期在轮播图上加不加字
-export const carouselList = [
+export const navCarouselList = [
     {
         pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAgw_T7ywUolI-d8gYwgA842AQ.jpg",
     },
     {
         pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAgyOT7ywUourObjgcwgA842AQ.jpg",
+    }
+]
+
+export const carouselList = [
+    {
+        pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAg2ur7ywUol764uQQwmQI41AI.jpg",
+        url:"http://baidu.com"
+    },{
+        pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAg2ur7ywUol764uQQwmQI41AI.jpg",
+        url:"http://baidu.com"
+    },{
+        pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAg2ur7ywUol764uQQwmQI41AI.jpg",
+        url:"http://baidu.com"
+    },{
+        pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAg2ur7ywUol764uQQwmQI41AI.jpg",
+        url:"http://baidu.com"
+    },{
+        pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAg2ur7ywUol764uQQwmQI41AI.jpg",
+        url:"http://baidu.com"
+    },{
+        pic:"http://14432776.s61i.faiusr.com/2/AD0IiPTwBhACGAAg2ur7ywUol764uQQwmQI41AI.jpg",
+        url:"http://baidu.com"
     }
 ]
 

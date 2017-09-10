@@ -19,6 +19,7 @@ const LOCAL_URLS = {
     fetchTeleTextList: db.teleTextList,
     fetchCarouselList: db.carouselList,
     fetchNavStore:db.navStore,
+    fetchNavCarouselList:db.navCarouselList,
     fetchImglList:db.imgStore
 }
 

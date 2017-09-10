@@ -1,15 +1,19 @@
 <template>
 <div class="app">
     <top-bar></top-bar> 
-    <carousel :carouselList="carouselList"></carousel>
+    <nav-carousel :carouselList="navCarouselList"></nav-carousel>
     <tele-text :teleTextList="teleTextList" v-if="teleTextList"></tele-text>
     <img-list :imgStore="imgStore"></img-list>
+    <carousel></carousel>
+    <right-bar></right-bar>
 </div>
 </template>
 
 <script>
 import topBar from "../common/topbar.vue"
+import rightBar from "../common/rightbar.vue"
 import teleText from "./components/teleText.vue"
+import navCarousel from "./components/navCarousel.vue"
 import carousel from "./components/carousel.vue"
 import imgList from "./components/imgList.vue"
 import api from "../common/api.js"
@@ -18,8 +22,9 @@ export default {
     data(){
         return {
             teleTextList:{},
-            carouselList:{},
-            imgStore:{}
+            navCarouselList:{},
+            imgStore:{},
+            carouselList:{}
         }
     },
     props:{
@@ -27,16 +32,19 @@ export default {
     },
     components: {
         topBar,
+        rightBar,
         teleText,
+        navCarousel,
+        imgList,
         carousel,
-        imgList
+        
     },
     mounted(){
         api.fetchTeleTextList().then((res)=>{
             this.teleTextList = res
         })
-        api.fetchCarouselList().then((res)=>{
-            this.carouselList = res
+        api.fetchNavCarouselList().then((res)=>{
+            this.navCarouselList = res
         })
 
         api.fetchImglList().then((res)=>{
